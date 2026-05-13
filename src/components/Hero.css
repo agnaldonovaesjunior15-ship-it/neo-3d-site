@@ -1,0 +1,139 @@
+.hero {
+  position: relative;
+  background: var(--g950);
+  color: var(--white);
+  padding: 160px 40px 100px;
+  overflow: hidden;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Círculo decorativo grande (teal, baixa opacidade) */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -180px;
+  width: 780px;
+  height: 780px;
+  border-radius: 50%;
+  border: 110px solid rgba(15,146,140,.045);
+  pointer-events: none;
+}
+
+/* Círculo decorativo menor (lima, acento sutil) */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 120px;
+  right: 200px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(190,238,59,.08);
+  pointer-events: none;
+}
+
+/* Grid técnico de fundo */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--teal-core);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.hero-tag::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--teal-core);
+  display: inline-block;
+}
+
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(48px, 7.8vw, 108px);
+  font-weight: 800;
+  line-height: .92;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+  max-width: 1100px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--teal-core);
+}
+
+.hero-sub {
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 300;
+  color: rgba(255,255,255,.55);
+  max-width: 580px;
+  margin-bottom: 3rem;
+  line-height: 1.75;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 5rem;
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,.07);
+  padding-top: 2rem;
+  max-width: 760px;
+}
+
+.hero-meta-item label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,.28);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.hero-meta-item span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -.3px;
+}
+.hero-meta-item span em {
+  font-style: normal;
+  color: var(--teal-core);
+}
+
+@media (max-width: 680px) {
+  .hero { padding: 130px 24px 80px; min-height: auto; }
+}

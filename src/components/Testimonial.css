@@ -1,0 +1,120 @@
+.testi-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (min-width: 920px) {
+  .testi-wrap { grid-template-columns: 1fr 1.3fr; gap: 5rem; }
+}
+
+.testi-quote-block { position: relative; }
+
+.testi-mark {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 120px;
+  line-height: .7;
+  color: var(--teal-core);
+  font-weight: 800;
+  margin-bottom: .5rem;
+  display: block;
+}
+
+.testi-quote {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--g950);
+  line-height: 1.25;
+  letter-spacing: -.4px;
+  margin-bottom: 2rem;
+}
+.testi-quote em {
+  font-style: normal;
+  color: var(--teal-core);
+}
+
+.testi-attrib {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+.testi-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal-core), var(--teal-deep));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -.5px;
+}
+.testi-name {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--g950);
+}
+.testi-role {
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 1.5px;
+  color: var(--g400);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ─── STATS GRID ─── */
+.testi-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(0,0,0,.08);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.testi-stat {
+  background: var(--white);
+  padding: 2rem 1.5rem;
+}
+.ts-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--g400);
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.ts-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--g950);
+  line-height: 1;
+  letter-spacing: -1.5px;
+  margin-bottom: .5rem;
+}
+.ts-value em {
+  font-style: normal;
+  color: var(--teal-core);
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 2px;
+}
+.ts-cap {
+  font-size: 13px;
+  color: var(--g500);
+  line-height: 1.55;
+}
+
+@media (max-width: 680px) {
+  .testi-mark { font-size: 80px; }
+}

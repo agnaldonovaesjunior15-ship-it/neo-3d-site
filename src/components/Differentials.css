@@ -1,0 +1,50 @@
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,.06);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.06);
+}
+@media (min-width: 760px)  { .diff-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .diff-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.diff-card {
+  background: var(--g950);
+  padding: 2.25rem 2rem;
+  position: relative;
+  transition: background .25s;
+}
+.diff-card:hover { background: #222222; }
+
+.diff-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--teal-core);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.diff-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+  color: var(--teal-core);
+}
+
+.diff-card h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: .75rem;
+  letter-spacing: -.3px;
+}
+.diff-card p {
+  font-size: 13.5px;
+  color: rgba(255,255,255,.5);
+  line-height: 1.7;
+}

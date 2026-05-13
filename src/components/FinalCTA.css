@@ -1,0 +1,110 @@
+.cta-final {
+  position: relative;
+  padding: 140px 40px;
+  background: var(--g950);
+  color: var(--white);
+  overflow: hidden;
+}
+.cta-final::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -80px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  border: 70px solid rgba(15,146,140,.05);
+}
+.cta-final::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(190,238,59,.08);
+}
+
+.cta-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 920px) {
+  .cta-inner { grid-template-columns: 1.4fr 1fr; gap: 5rem; }
+}
+
+.cta-final h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(42px, 5.4vw, 72px);
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -1px;
+  margin-bottom: 1.5rem;
+}
+.cta-final h2 em {
+  font-style: normal;
+  color: var(--teal-core);
+}
+
+.cta-final-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,.55);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* ─── Card lateral de canais ─── */
+.cta-info {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  padding: 2rem;
+}
+.cta-info-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--teal-core);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.cta-info-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: .85rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  font-size: 13.5px;
+  color: rgba(255,255,255,.7);
+}
+.cta-info-line:last-child { border-bottom: none; }
+.cta-info-line strong {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: .3px;
+}
+.cta-info-line span {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,.4);
+}
+
+@media (max-width: 680px) {
+  .cta-final { padding: 80px 24px; }
+}

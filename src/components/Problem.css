@@ -1,0 +1,140 @@
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (min-width: 880px) {
+  .problem-grid {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 5rem;
+  }
+}
+
+/* ─── CARD STAT (esquerda) ─── */
+.problem-stat-block {
+  background: var(--g950);
+  border-radius: 10px;
+  padding: 3rem;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.problem-stat-block::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 40px solid rgba(15,146,140,.08);
+}
+
+.psb-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--teal-core);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.psb-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(72px, 9vw, 128px);
+  font-weight: 800;
+  line-height: .9;
+  color: var(--white);
+  letter-spacing: -3px;
+  margin-bottom: .5rem;
+  position: relative;
+}
+.psb-num em {
+  font-style: normal;
+  color: var(--orange-mid); /* acento laranja, ≤8% da peça */
+}
+.psb-cap {
+  font-size: 14px;
+  color: rgba(255,255,255,.55);
+  max-width: 340px;
+  line-height: 1.65;
+  position: relative;
+}
+.psb-divider {
+  height: 1px;
+  background: rgba(255,255,255,.08);
+  margin: 2rem 0;
+  position: relative;
+}
+.psb-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  font-size: 13.5px;
+  color: rgba(255,255,255,.7);
+  position: relative;
+}
+.psb-line strong {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: .3px;
+}
+.psb-line span {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--teal-core);
+  letter-spacing: 1.5px;
+}
+
+/* ─── TEXTO + LISTA (direita) ─── */
+.problem-text h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+  color: var(--g950);
+  letter-spacing: -.5px;
+}
+.problem-text p {
+  font-size: 16px;
+  color: var(--g500);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+.problem-text p strong { color: var(--g900); font-weight: 600; }
+
+.pain-list { margin-top: 2rem; }
+
+.pain-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid rgba(0,0,0,.07);
+  align-items: flex-start;
+}
+.pain-item:last-child {
+  border-bottom: 1px solid rgba(0,0,0,.07);
+}
+.pain-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--teal-core);
+  min-width: 28px;
+  padding-top: 3px;
+}
+.pain-txt {
+  font-size: 14.5px;
+  color: var(--g600);
+  line-height: 1.65;
+}
+.pain-txt b { color: var(--g900); font-weight: 600; }
+
+@media (max-width: 680px) {
+  .problem-stat-block { padding: 2rem; }
+}

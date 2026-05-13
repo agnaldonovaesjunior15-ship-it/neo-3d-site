@@ -1,0 +1,42 @@
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -.5px;
+}
+
+.logo .neoN {
+  color: var(--white);
+  background: var(--teal-core);
+  padding: 3px 9px;
+  border-radius: 5px 0 0 5px;
+}
+
+.logo .neo3 {
+  color: var(--teal-core);
+  border: 2px solid var(--teal-core);
+  padding: 3px 9px;
+  border-radius: 0 5px 5px 0;
+  margin-left: -2px;
+}
+
+.logo-tag {
+  display: none;
+  margin-left: 14px;
+  padding-left: 14px;
+  border-left: 1px solid rgba(255,255,255,.12);
+  font-family: 'Barlow', sans-serif;
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: rgba(255,255,255,.4);
+  text-transform: uppercase;
+  line-height: 1.5;
+  max-width: 180px;
+}
+
+@media (min-width: 980px) {
+  .logo-tag { display: block; }
+}

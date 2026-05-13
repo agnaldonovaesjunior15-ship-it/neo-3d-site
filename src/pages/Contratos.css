@@ -1,0 +1,171 @@
+.plans-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 780px)  { .plans-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.plan-card {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: 2.25rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all .25s;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px -28px rgba(15,146,140,.25);
+  border-color: rgba(15,146,140,.4);
+}
+
+.plan-card.feat {
+  background: var(--g950);
+  color: var(--white);
+  border: none;
+}
+.plan-card.feat:hover {
+  box-shadow: 0 24px 60px -28px rgba(15,146,140,.5);
+}
+
+.plan-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--teal-core);
+  color: var(--white);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.plan-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--teal-core);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-tag::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+}
+.plan-card.feat .plan-tag { color: var(--lime-core); }
+
+.plan-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--g950);
+  line-height: 1;
+  letter-spacing: -.5px;
+  margin-bottom: .25rem;
+}
+.plan-card.feat h3 { color: var(--white); }
+
+.plan-price {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--g400);
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.plan-card.feat .plan-price {
+  color: rgba(255,255,255,.4);
+  border-bottom-color: rgba(255,255,255,.08);
+}
+
+.plan-card ul {
+  list-style: none;
+  flex: 1;
+  margin-bottom: 1.75rem;
+}
+.plan-card li {
+  padding: .55rem 0;
+  font-size: 14px;
+  color: var(--g500);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.55;
+}
+.plan-card li::before {
+  content: '→';
+  color: var(--teal-core);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.plan-card.feat li { color: rgba(255,255,255,.7); }
+.plan-card.feat li::before { color: var(--lime-core); }
+
+/* Variante de botão para fundo claro */
+.btn-ghost-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  background: transparent;
+  color: var(--g950);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 6px;
+  transition: all .2s;
+  align-self: flex-start;
+}
+.btn-ghost-dark:hover {
+  border-color: var(--teal-core);
+  color: var(--teal-core);
+}
+
+/* Link para o modelo de contrato */
+.contract-link {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+@media (min-width: 760px) {
+  .contract-link {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.contract-link h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--g950);
+  margin: .25rem 0 .5rem;
+  letter-spacing: -.3px;
+}
+.contract-link p {
+  font-size: 14px;
+  color: var(--g500);
+  line-height: 1.65;
+}
