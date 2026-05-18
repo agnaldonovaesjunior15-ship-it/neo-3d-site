@@ -172,7 +172,6 @@ export default function Contato() {
                   </div>
                   <div>
                     <strong>WhatsApp</strong>
-                    <span>(11) 93927-7467</span>
                   </div>
                 </a>
 
@@ -188,15 +187,6 @@ export default function Contato() {
                     <span>contato@neo3d.com.br</span>
                   </div>
                 </a>
-
-                <div className="canal-info">
-                  <div className="card-tag">/ Localização</div>
-                  <p>
-                    Atendemos <strong>São Paulo</strong> (Capital, Mogi das Cruzes,
-                    Sorocaba) e Grande SP, com capacidade de atendimento em todo o
-                    território nacional via deslocamento agendado.
-                  </p>
-                </div>
 
                 <div className="canal-info">
                   <div className="card-tag">/ Horário</div>

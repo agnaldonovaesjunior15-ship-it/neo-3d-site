@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import './FinalCTA.css'
 
 const channels = [
-  { label: 'WhatsApp',  value: '(11) 93927-7467' },
   { label: 'E-mail',    value: 'contato@neo3d.com.br' },
   { label: 'Cobertura', value: 'SP · MG · RJ' },
   { label: 'Resposta',  value: '≤ 24h úteis' },
