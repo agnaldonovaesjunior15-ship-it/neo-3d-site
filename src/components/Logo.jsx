@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logoImg from '../assets/logo.gif'
+import logoImg from '../assets/logo.png'
 import './Logo.css'
 
 export default function Logo({ showTagline = false }) {
