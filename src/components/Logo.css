@@ -1,25 +1,12 @@
 .logo {
   display: flex;
   align-items: center;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -.5px;
 }
 
-.logo .neoN {
-  color: var(--white);
-  background: var(--teal-core);
-  padding: 3px 9px;
-  border-radius: 5px 0 0 5px;
-}
-
-.logo .neo3 {
-  color: var(--teal-core);
-  border: 2px solid var(--teal-core);
-  padding: 3px 9px;
-  border-radius: 0 5px 5px 0;
-  margin-left: -2px;
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .logo-tag {
